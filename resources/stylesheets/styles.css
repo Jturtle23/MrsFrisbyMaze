@@ -1,0 +1,144 @@
+/* styles.css */
+
+
+
+@import url("reset.css");
+
+/*
+=======================
+   GLOBAL SELECTORS 
+=======================
+*/
+
+:root {
+	--main-fonts: Arial, sans-serif, serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+/*
+=======================
+      COMPONENTS
+=======================
+*/
+
+#container {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#github-link {
+	cursor: pointer;
+	margin: 0 0 20px 10px;
+	text-align: left;
+	text-decoration: underline;
+	font-family: var(--main-fonts);
+}
+
+#players-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#player-name-input {
+	padding: 15px;
+	background-color: #ffeecc;
+	border: none;
+	border-radius: 5px;
+}
+
+#player-name-input:focus {
+	outline: none;
+	border: 1px solid #000;
+}
+
+#add-player-button {
+	display: inline-block;
+	margin: 5px;
+	padding: 15px;
+	background-color: #999999;
+	font-family: var(--main-fonts);
+	border: none;
+	border-radius: 5px;
+}
+
+#add-player-button:hover {
+	cursor: pointer;
+	background-color: #a6a6a6;
+}
+
+#roll-die {
+	display: block;
+	margin: 30px auto;
+	padding: 10px;
+}
+
+
+
+.player-card {
+	flex-grow : 1;
+	margin: 10px;
+	padding: 20px;
+	background-color: #ffffcc;
+	color: #000;
+	font-family: var(--main-fonts);
+	border-radius: 10px;
+}
+
+.player-control-button {
+	cursor: pointer;
+	display: block;
+	width: 75%;
+	margin: 5px auto;
+	padding: 16px;
+	background-image: linear-gradient(to bottom, #ffd480, #ffc34d);
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+}
+
+.player-controls-button:hover {
+	background-image: linear-gradient(to bottom, #ffc34d, #ffd480);
+}
+
+.active-pause-button {
+	background-image: linear-gradient(to bottom, #fff7e6, #ffe6b3);
+	color: #404040;
+}
+
+.delete-player-button {
+	cursor: pointer;
+	margin-top: 10px;
+	padding: 10px;
+	background-image: linear-gradient(to bottom, rgb(255, 0, 0), rgb(255, 200, 200));
+	color: #000;
+	border: none;
+	border-radius: 5px;
+}
+
+.delete-player-button:hover {
+	text-decoration: underline;
+}
+
+/*
+=======================
+    MEDIA QUERIES 
+=======================
+*/
+   
+@media screen and (min-width: 450px) {
+	
+	#players-container {
+		flex-direction: row;
+	}
+	
+	.player-card {
+		min-width: 40%;
+		max-width: 40%;
+	}
+	
+}
