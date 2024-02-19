@@ -50,14 +50,16 @@ class Player {
 		const playerCardContent = document.createElement('div');
 		
 		
-		
 		// Check if no name was given
+		const playerName = document.createElement('p');
+		playerName.classList.add('player-name');
 		if (this.name === '') {
 			this.name = 'Player';
-			playerCardContent.textContent = this.name;
+			playerName.textContent = this.name;
 		} else {
-			playerCardContent.textContent = this.name;
+			playerName.textContent = this.name;
 		}
+		playerCardContent.appendChild(playerName);
 		
 		const playerControls = createPlayerControls()
 		playerCardContent.appendChild(playerControls);
@@ -179,7 +181,8 @@ class Player {
 				clearInterval(self.timerIntervalId);
 				alert(self.name + '\'s time ran out!');
 				
-			}		
+			}
+			
 			
 			// Change the player time textContent of the current player ID
 			self.time--;
@@ -262,7 +265,7 @@ function createInstanceOfPlayer() {
 }
 
 
-const rollDieButton = document.querySelector('#roll-die');
+const rollDieButton = document.querySelector('#roll-die-button');
 rollDieButton.addEventListener('click', function() {
 	Game.rollDie();
 });
