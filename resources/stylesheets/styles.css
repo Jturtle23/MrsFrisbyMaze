@@ -1,5 +1,9 @@
 /* styles.css */
 
+/* Note: The website that uses this stylesheet is meant to be used on a phone.
+So, the original styles prioritize phones, but media queries change elements so
+that they look good on a computer as well. */
+
 
 
 @import url("reset.css");
@@ -18,6 +22,10 @@ body {
 	overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+	font-family: Arial, sans-serif, serif;
+}
+
 /*
 =======================
       COMPONENTS
@@ -25,14 +33,20 @@ body {
 */
 
 #container {
-	margin: 10px auto;
+	margin: 0 auto;
 	text-align: center;
+}
+
+#header {
+	margin-bottom: 15px;
+	padding: 10px 0 15px 0;
+	background-color: #b3e6ff;
 }
 
 #github-link {
 	cursor: pointer;
 	margin: 0 0 20px 10px;
-	text-align: left;
+	text-align: center;
 	text-decoration: underline;
 	font-family: var(--main-fonts);
 }
@@ -44,44 +58,60 @@ body {
 	justify-content: center;
 }
 
+#controls-interface-container {
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 #player-name-input {
 	padding: 15px;
-	background-color: #ffeecc;
+	background-image: linear-gradient(to bottom, #ffeecc, #fff7e6);
 	border: none;
-	border-radius: 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+::placeholder {
+	color: #8c8c8c;
 }
 
 #player-name-input:focus {
 	outline: none;
-	border: 1px solid #000;
 }
 
 #add-player-button {
+	border-radius: 0 5px 5px 0;
+}
+
+#roll-die-button {
+	margin-left: 5px;
+}
+
+.controls-interface-button {
+	cursor: pointer;
 	display: inline-block;
-	margin: 5px;
 	padding: 15px;
-	background-color: #999999;
+	background-color: #e6e6e6;
 	font-family: var(--main-fonts);
 	border: none;
 	border-radius: 5px;
 }
 
-#add-player-button:hover {
-	cursor: pointer;
-	background-color: #a6a6a6;
-}
-
-#roll-die {
-	display: block;
-	margin: 30px auto;
-	padding: 10px;
+.controls-interface-button:hover {
+	background-color: #bfbfbf;
+	transition-duration: 0.2s;
 }
 
 
 
 .player-card {
 	flex-grow : 1;
-	margin: 10px;
+	width: 70%;
+	margin: 10px auto;
 	padding: 20px;
 	background-color: #ffffcc;
 	color: #000;
@@ -89,10 +119,15 @@ body {
 	border-radius: 10px;
 }
 
+.player-name {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
 .player-control-button {
 	cursor: pointer;
 	display: block;
-	width: 75%;
+	width: 80%;
 	margin: 5px auto;
 	padding: 16px;
 	background-image: linear-gradient(to bottom, #ffd480, #ffc34d);
