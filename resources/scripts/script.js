@@ -250,7 +250,7 @@ playerNameInput.addEventListener('keypress', function(event) {
 
 function createInstanceOfPlayer() {
 	
-	const name = document.querySelector('#player-name-input').value;
+	const name = playerNameInput.value;
 	
 	let player;
 	
@@ -259,6 +259,8 @@ function createInstanceOfPlayer() {
 	} else {
 		player = new Player();
 	}
+	
+	playerNameInput.value = ''; // Clears out the text content of the text input
 	
 	player.createPlayerCard();
 	
