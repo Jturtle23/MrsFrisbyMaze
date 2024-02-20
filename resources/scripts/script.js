@@ -19,7 +19,7 @@ class Player {
 	
 	static playerNum = 0;
 	
-	constructor(name='', time=690) {
+	constructor(name='', time=390) {
 		
 		Player.playerNum++;
 		
