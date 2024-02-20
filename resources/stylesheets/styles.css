@@ -41,13 +41,13 @@ button {
 	text-align: center;
 }
 
-#header {
+header {
 	margin-bottom: 15px;
 	padding: 10px 0 15px 0;
 	background-color: #b3e6ff;
 }
 
-#github-link {
+header #github-link {
 	cursor: pointer;
 	margin: 0 0 20px 10px;
 	text-align: center;
@@ -60,6 +60,10 @@ button {
 	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+#players-container .player-card:last-child {
+	margin-bottom: 90px;
 }
 
 #controls-interface-container {
@@ -162,6 +166,7 @@ button {
 .delete-player-button:hover {
 	text-decoration: underline;
 }
+
 
 /*
 =======================
