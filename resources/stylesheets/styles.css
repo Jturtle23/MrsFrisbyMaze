@@ -173,11 +173,16 @@ header #github-link {
     MEDIA QUERIES 
 =======================
 */
-   
+ 
+ 
 @media screen and (min-width: 450px) {
 	
 	#players-container {
 		flex-direction: row;
+	}
+	
+	#players-container .player-card:last-child {
+		margin-bottom: 10px;
 	}
 	
 	.player-card {
